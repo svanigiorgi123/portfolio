@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Frontend Portfolio" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Portfolio | Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=15" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-box">
+      <span>Loading</span>
+      <div class="loader-bar"><i></i></div>
+    </div>
+  </div>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <div class="cursor-glow"></div>
+  <div class="spotlight"></div>
+  <canvas id="particles"></canvas>
+
+  <header class="header" id="header">
+    <nav class="container nav">
+      <a class="logo magnetic" data-cursor="hover" href="#home">&lt;Portfolio&gt;</a>
+      <ul class="links" id="links">
+        <li><a class="magnetic" data-cursor="hover" data-i18n="nav.home" href="#home">Home</a></li>
+        <li><a class="magnetic" data-cursor="hover" data-i18n="nav.about" href="#about">About</a></li>
+        <li><a class="magnetic" data-cursor="hover" data-i18n="nav.skills" href="#skills">Skills</a></li>
+        <li><a class="magnetic" data-cursor="hover" data-i18n="nav.projects" href="#projects">Projects</a></li>
+        <li><a class="magnetic" data-cursor="hover" data-i18n="nav.contact" href="#contact">Contact</a></li>
+      </ul>
+      <button id="langToggle" class="lang magnetic" data-cursor="hover">KA / EN</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <p class="badge magnetic" data-cursor="hover"><span class="dot"></span><span data-i18n="hero.badge">Frontend Developer</span></p>
+          <h1><span data-i18n="hero.hello">Hi, I am</span> <span class="name glitch" data-text="Your Name">Giorgi Svanidze</span></h1>
+          <p class="muted" data-i18n="hero.desc">I build modern websites with HTML, CSS, JavaScript and React.</p>
+          <div class="cta">
+            <a href="#projects" class="btn primary magnetic" data-cursor="hover" data-i18n="hero.ctaProjects">Projects</a>
+            <a href="#contact" class="btn ghost magnetic" data-cursor="hover" data-i18n="hero.ctaContact">Contact</a>
+          </div>
+          <div class="stats">
+            <div class="magnetic" data-cursor="hover"><strong data-count="3">0</strong><span data-i18n="hero.statProjects">Projects</span></div>
+            <div class="magnetic" data-cursor="hover"><strong data-count="6">0</strong><span data-i18n="hero.statTech">Technologies</span></div>
+            <div class="magnetic" data-cursor="hover"><strong data-count="1">0</strong><span data-i18n="hero.statYears">Study Year</span></div>
+          </div>
+        </div>
+
+        <div class="orb-wrap">
+          <div class="orb magnetic" data-cursor="hover">
+            <div class="ring r1"></div>
+            <div class="ring r2"></div>
+            <div class="ring r3"></div>
+            <div class="center">&lt;/&gt;</div>
+            <span class="chip c1">HTML</span>
+            <span class="chip c2">CSS</span>
+            <span class="chip c3">JS</span>
+            <span class="chip c4">React</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span>01</span>
+          <h2 data-i18n="about.title">About Me</h2>
+        </div>
+        <p class="card reveal" data-i18n="about.text">I am a first-year student focused on frontend development. I build modern, responsive websites and already have completed projects with real hands-on experience. I work with HTML, CSS, JavaScript, and React, and I am also learning C++ and Node.js. I care about clean code, good UI, and growing my skills every day. I am open to new opportunities and ready for new challenges.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span>02</span>
+          <h2 data-i18n="skills.title">Skills</h2>
+        </div>
+        <div id="skillsGrid" class="skills-grid"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span>03</span>
+          <h2 data-i18n="projects.title">Projects</h2>
+        </div>
+        <p class="muted" data-i18n="projects.subtitle">Projects will be added after you send them.</p>
+        <div id="projectsGrid" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span>04</span>
+          <h2 data-i18n="contact.title">Contact</h2>
+        </div>
+        <div class="contact-list">
+          <a class="magnetic" data-cursor="hover" href="mailto:gsvanidze829@gmail.com">Gmail</a>
+          <a class="magnetic" data-cursor="hover" href="https://github.com/svanigiorgi123" target="_blank" rel="noopener">GitHub</a>
+          <a class="magnetic" data-cursor="hover" href="https://www.linkedin.com/in/giorgi-svanidze-882862403" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">&copy; <span id="year"></span> <span data-i18n="footer">All rights reserved</span></div>
+  </footer>
+
+  <script src="js/i18n.js?v=15"></script>
+  <script src="js/projects.js?v=15"></script>
+  <script src="js/cursor.js?v=15"></script>
+  <script src="js/main.js?v=15"></script>
+</body>
+</html>
