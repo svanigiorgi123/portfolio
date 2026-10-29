@@ -70,7 +70,7 @@ h1{font-size:clamp(34px,5vw,58px);margin:14px 0}
 
 .section-head{display:flex;gap:10px;align-items:center;margin-bottom:16px}
 .section-head span{font-family:"JetBrains Mono",monospace;color:#86ccff}
-.card{background:var(--card);border:1px solid var(--line);padding:24px;border-radius:16px;max-width:760px}
+.card{background:var(--card);border:1px solid var(--line);padding:24px;border-radius:16px;max-width:760px;white-space:pre-line}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
 .skill{background:var(--card);border:1px solid var(--line);padding:14px;border-radius:14px;transform:translateY(8px);opacity:0;transition:.45s}
 .skill.show{transform:translateY(0);opacity:1}
